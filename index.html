@@ -4,30 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <title>CipherGuard</title>
 </head>
 <body>
-  <header class="center shadow">
+  <header class="header shadow">
     <h1>CipherGuard</h1>
     <h2>Tu portal de encriptación confiable</h2>
   </header>
-  <main class="center">
+  <main class="container">
     <section class="original-text">
       <form action="">
-        <textarea name="" id="original" cols="30" rows="10"></textarea>
+        <textarea name="" id="original"></textarea>
         <div class="buttons">
           <input class="dark-button" type="button" value="Encriptar" id="encrypt">
-          <input class="light-button" type="button" value="Desencriptar" id="decrypt">
+          <input class="light-button" type="button" value="Desencriptar" id="decrypt" class="decrypt">
         </div>
+        <p><span>*</span> Solo puede usar letras en minúscula y sin acentos</p>
       </form>
     </section>
-    <section class="modified-text shadow">
+    <section class="modified-text">
       <form action="">
         <textarea name="" id="modified" cols="30" rows="10"></textarea>
         <div class="buttons">
-          <input class="light-button" type="button" value="Copiar" id="copy">
+          <input class="dark-button" type="button" value="Copiar" id="copy">
         </div>
       </form>
     </section>
