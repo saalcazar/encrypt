@@ -59,7 +59,7 @@ body {
   width: 85%;
   min-height: 80vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -69,6 +69,18 @@ body {
     width: 100%;
     justify-content: space-around;
     flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .original-text {
+    width: 70%;
+    min-height: 80vh;
+    margin-right: 2rem;
+  }
+  .modified-text {
+    width: 25%;
+    min-height: 80vh;
   }
 }
 
@@ -163,18 +175,20 @@ body {
   padding: 3px;
   display: flex;
   justify-content: space-around;
+  bottom: 1.5rem;
 }
 
 .dark-button {
-  cursor: pointer;
   all: unset;
+  cursor: pointer;
   background: tomato;
   padding: 1rem;
+  color: white;
 }
 
 .light-button {
-  cursor: pointer;
   all: unset;
+  cursor: pointer;
   border: .5px solid tomato;
   padding: 1rem;
   color: tomato;
