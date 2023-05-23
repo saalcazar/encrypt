@@ -15,21 +15,19 @@
   <main class="container">
     <section class="original-text">
       <form action="">
-        <textarea name="" id="original"></textarea>
+        <textarea class="original" name="" id="original" placeholder="Introduce el texto aquí"></textarea>
         <div class="buttons">
           <input class="dark-button" type="button" value="Encriptar" id="encrypt">
-          <input class="light-button" type="button" value="Desencriptar" id="decrypt" class="decrypt">qa
+          <input class="light-button" type="button" value="Desencriptar" id="decrypt" class="decrypt">
         </div>
-        <p><span>*</span> Solo puede usar letras en minúscula y sin acentos</p>
+        <p class="caution"><span>✍</span> Solo puede usar letras en minúscula y sin acentos</p>
       </form>
     </section>
     <section class="modified-text">
-      <form action="">
-        <textarea name="" id="modified" cols="30" rows="10"></textarea>
+        <textarea id="modified" class="modified"></textarea>
         <div class="buttons">
           <input class="dark-button" type="button" value="Copiar" id="copy">
         </div>
-      </form>
     </section>
   </main>
   <script src="js/script.js"></script>

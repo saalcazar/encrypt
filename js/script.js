@@ -7,6 +7,8 @@ const encrypt = document.getElementById('encrypt')
 const decrypt = document.getElementById('decrypt')
 const copy = document.getElementById('copy')
 
+console.log(modified)
+
 const encryptText = () => {
   encrypt.addEventListener('click', () => {
     let textArray = original.value.split('')
