@@ -66,7 +66,7 @@ body {
 
 @media (min-width: 900px) {
   .container {
-    width: 100%;
+    width: 90%;
     justify-content: space-around;
     flex-direction: row;
   }
