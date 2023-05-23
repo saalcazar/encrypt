@@ -35,12 +35,24 @@ textarea {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: steelblue;
-  animation: changeColor 2s infinite alternate;
+  animation: changeColor 8+-+s infinite alternate;
 }
 
 @keyframes changeColor {
-  to {
+  10% {
     color: skyblue;
+  }
+
+  50% {
+    color: tomato;
+  }
+
+  80% {
+    color: greenyellow;
+  }
+
+  100% {
+    color: darkblue;
   }
 }
 
