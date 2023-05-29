@@ -36,7 +36,7 @@ encrypt.addEventListener('click', () => {
     }
     modified.value = textArray.join('')
     imgEncript.classList.add('animate')
-    imgEncript.src='/img/1.svg'
+    imgEncript.src='img/1.svg'
   }
   })
 }
@@ -63,7 +63,7 @@ const decryptText = () => {
       }
     }
     modified.value = textArray.join('')
-    imgEncript.src='/img/2.svg'
+    imgEncript.src='img/2.svg'
     imgEncript.classList.add('animate')
   })
 }
