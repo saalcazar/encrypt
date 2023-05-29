@@ -55,6 +55,10 @@ body {
   font-size: 1.1rem;
 }
 
+.header h3 {
+  margin-top: .5rem;
+}
+
 .container {
   width: 85%;
   min-height: 80vh;
