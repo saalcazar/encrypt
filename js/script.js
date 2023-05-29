@@ -7,10 +7,19 @@ const encrypt = document.getElementById('encrypt')
 const decrypt = document.getElementById('decrypt')
 const copy = document.getElementById('copy')
 
-console.log(modified)
+//Capture img
+const imgEncript = document.getElementById('img-encript')
+
+//Regular exprecion
+const re = /^[a-z\s]*$/
 
 const encryptText = () => {
-  encrypt.addEventListener('click', () => {
+encrypt.addEventListener('click', () => {
+  let text = original.value
+  let ok = re.exec(text)
+  if(!ok) {
+    alert('Solo letras minúsculas y sin acentos')
+  }else {
     let textArray = original.value.split('')
     for (let i = 0; i < textArray.length; i++) {
       if (textArray[i] === 'a') {
@@ -26,6 +35,9 @@ const encryptText = () => {
       }
     }
     modified.value = textArray.join('')
+    imgEncript.classList.add('animate')
+    imgEncript.src='/img/1.svg'
+  }
   })
 }
 
@@ -51,16 +63,24 @@ const decryptText = () => {
       }
     }
     modified.value = textArray.join('')
+    imgEncript.src='/img/2.svg'
+    imgEncript.classList.add('animate')
   })
 }
 
 const copyText = () => {
   copy.addEventListener('click', () => {
     let text = modified.value
-    if (text) {
-      original.value = text
-      modified.value = ''
-    }
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        console.log('Texto copiado al portapapleles: ' + text)
+      })
+      .catch(err => {
+        console.error('Error al copiar al portapapeles', err)
+      })
+
+    original.value = ''
+    original.focus()
   })
 }
 
